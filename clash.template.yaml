@@ -13,7 +13,7 @@ proxies:
     port: 10086
     alterId: 0
     cipher: auto
-    uuid: $UUID$
+    uuid: 80e131c5-5733-462e-9136-40128761132f
 
 proxy-groups:
   - name: PROXY
