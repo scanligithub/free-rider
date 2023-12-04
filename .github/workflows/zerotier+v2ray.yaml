@@ -25,7 +25,7 @@ jobs:
       - name: Start ZeroTier
         env:
           # 如果修改了 IP_ASSIGNMENT，那么对于 clash 配置的服务器地址也应当同步。
-          IP_ASSIGNMENT: 172.28.119.254
+          IP_ASSIGNMENT: 172.28.119.253
           ZEROTIER_NETWORK_ID: ${{ secrets.ZEROTIER_NETWORK_ID }}
           ZEROTIER_TOKEN: ${{ secrets.ZEROTIER_TOKEN }}
         run: |
