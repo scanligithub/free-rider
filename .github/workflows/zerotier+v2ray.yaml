@@ -5,10 +5,10 @@ name: ZeroTier+V2ray
 # 2. 应当确保 IP_ASSIGNMENT
 
 on:
-  workflow_dispatch:
+  # workflow_dispatch:
   # 取消注释以启用定时任务（默认每小时），具体生成可参考 https://www.freeformatter.com/cron-expression-generator-quartz.html
-  # schedule:
-  #  - cron: "0 0 * ? * *"
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   deploy:
@@ -35,7 +35,7 @@ jobs:
           sudo zerotier-cli join ${ZEROTIER_NETWORK_ID}
 
       - name: Start V2ray
-        timeout-minutes: 120
+        timeout-minutes: 60
         env:
           V2RAY_CONFIG_JSON: ${{ secrets.V2RAY_CONFIG_JSON }}
         run: |
