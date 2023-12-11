@@ -5,10 +5,10 @@ name: ZeroTier+V2ray
 # 2. 应当确保 IP_ASSIGNMENT
 
 on:
-  # workflow_dispatch:
+  workflow_dispatch:
   # 取消注释以启用定时任务（默认每小时），具体生成可参考 https://www.freeformatter.com/cron-expression-generator-quartz.html
-  schedule:
-   - cron: '23 */6 * * *'
+  # schedule:
+  #  - cron: '23 */6 * * *'
 
 jobs:
   deploy:
