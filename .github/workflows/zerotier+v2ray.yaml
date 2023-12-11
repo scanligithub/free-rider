@@ -35,7 +35,7 @@ jobs:
           sudo zerotier-cli join ${ZEROTIER_NETWORK_ID}
 
       - name: Start V2ray
-        timeout-minutes: 30
+        timeout-minutes: 359
         env:
           V2RAY_CONFIG_JSON: ${{ secrets.V2RAY_CONFIG_JSON }}
         run: |
