@@ -27,12 +27,12 @@ jobs:
       - name: Start Tailscale
         env:
           # 如果修改了 IP_ASSIGNMENT，那么对于 clash 配置的服务器地址也应当同步。
-          HOST_NAME: LJC_Tailscale_Host
+          HOST_NAME: ljc-tailscale-host
           TAILSCALE_TOKEN: ${{ secrets.TAILSCALE_TOKEN }}
         run: |
-          sudo tailscale login --authkey=$TAILSCALE_TOKEN
+          sudo tailscale login --authkey=$TAILSCALE_TOKEN --exit-node="$HOST_NAME"
           sudo tailscale up
-          sudo tailscale set --hostname="$HOST_NAME"          
+          # sudo tailscale set --hostname="$HOST_NAME"          
       - name: Start V2ray
         # 每次运行时间 60分钟
         timeout-minutes: 5
@@ -46,5 +46,4 @@ jobs:
         if: always()
         run: |
           echo "Immediately Cleanup"
-          sudo tailscale set --exit-node="$HOST_NAME"
           sudo tailscale logout
