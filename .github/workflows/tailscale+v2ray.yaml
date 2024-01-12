@@ -30,10 +30,9 @@ jobs:
           HOST_NAME: ljc-tailscale-host
           TAILSCALE_TOKEN: ${{ secrets.TAILSCALE_TOKEN }}
         run: |
-          sudo tailscale login --authkey=$TAILSCALE_TOKEN --advertise-exit-node
+          sudo tailscale login --authkey=$TAILSCALE_TOKEN 
           sudo tailscale up
-          # sudo tailscale set --hostname="$HOST_NAME"  
-          sudo tailscale set --exit-node "$HOST_NAME"
+          sudo tailscale set --hostname="$HOST_NAME"  
       - name: Start V2ray
         # 每次运行时间 60分钟
         timeout-minutes: 5
