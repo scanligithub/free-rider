@@ -36,7 +36,7 @@ jobs:
 
       - name: Start V2ray
         # 每次运行时间 60分钟
-        timeout-minutes: 60
+        timeout-minutes: 359
         env:
           V2RAY_CONFIG_JSON: ${{ secrets.V2RAY_CONFIG_JSON }}
         run: |
