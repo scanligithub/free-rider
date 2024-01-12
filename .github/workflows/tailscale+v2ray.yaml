@@ -32,6 +32,7 @@ jobs:
         run: |
           sudo tailscale login --authkey=$TAILSCALE_TOKEN
           sudo tailscale up
+          sudo tailscale exit-node list
           sudo tailscale set --hostname="$IP_ASSIGNMENT"
 
       - name: Start V2ray
