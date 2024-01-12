@@ -32,9 +32,8 @@ jobs:
         run: |
           sudo tailscale login --authkey=$TAILSCALE_TOKEN
           sudo tailscale up
-          sudo tailscale set --hostname="$IP_ASSIGNMENT"
-          sudo tailscale exit-node list
-
+          # sudo tailscale set --hostname="$IP_ASSIGNMENT"
+          sudo tailscale set --exit-node="$IP_ASSIGNMENT"
       - name: Start V2ray
         # 每次运行时间 60分钟
         timeout-minutes: 359
