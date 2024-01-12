@@ -33,7 +33,7 @@ jobs:
           sudo tailscale login --authkey=$TAILSCALE_TOKEN
           sudo tailscale up
           # sudo tailscale set --hostname="$IP_ASSIGNMENT"
-          sudo tailscale set --exit-node="$IP_ASSIGNMENT"
+          sudo tailscale set --exit-node="10-144-254-254"
       - name: Start V2ray
         # 每次运行时间 60分钟
         timeout-minutes: 359
