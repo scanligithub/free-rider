@@ -31,7 +31,7 @@ jobs:
           TAILSCALE_TOKEN: ${{ secrets.TAILSCALE_TOKEN }}
         run: |
           sudo tailscale login --authkey=$TAILSCALE_TOKEN 
-          sudo tailscale up
+          sudo tailscale up --advertise-exit-node
           sudo tailscale set --hostname="$HOST_NAME"  
       - name: Start V2ray
         # 每次运行时间 359分钟
