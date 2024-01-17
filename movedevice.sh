@@ -5,7 +5,7 @@ tailnet="tailf8fc9.ts.net"
 apikey="tskey-api-kmFNNv6CNTRL-LknwqGVVuK2foXf2TEbNL2XYVG5G29vWf"
 targetname="ljc-tailscale-host"
 
-curl -s "https://api.tailscale.com/api/v2/$tailnet/devices" -u "$apikey:" |jq -r '.devices[] |  "\(.id) \(.name)"' |
+curl -s "https://api.tailscale.com/api/v2/scanli@126.com/$tailnet/devices" -u "$apikey:" |jq -r '.devices[] |  "\(.id) \(.name)"' |
   while read id name; do
     if [[ $name = *"$targetname"* ]]
     then
