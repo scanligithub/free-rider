@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tailnet="ljc-tailscale-host.tailf8fc9.ts.net"
+tailnet="tailf8fc9.ts.net"
 # Replace with a path to your Tailscale API key.
 apikey="tskey-api-kmFNNv6CNTRL-LknwqGVVuK2foXf2TEbNL2XYVG5G29vWf"
 targetname="ljc-tailscale-host"
