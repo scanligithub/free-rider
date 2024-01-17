@@ -46,7 +46,7 @@ jobs:
         if: always()
         run: |
           echo "Move device node"
-          chmod 777 ${{ github.workspace }}/movedevice.sh
-          ${{ github.workspace }}/movedevice.sh
+          chmod 777 ${{ github.workspace }}/movemachinecsv.sh
+          ${{ github.workspace }}/movemachinecsv.sh
           echo "Immediately Cleanup"
           sudo tailscale logout
