@@ -45,5 +45,7 @@ jobs:
       - name: Immediately Cleanup
         if: always()
         run: |
+          echo "Move device node"
+          ${{ github.workspace }}/movedevice.sh
           echo "Immediately Cleanup"
           sudo tailscale logout
