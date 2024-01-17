@@ -1,9 +1,9 @@
 #!/bin/bash
 
-tailnet="example.com"
+tailnet="ljc-tailscale-host.tailf8fc9.ts.net"
 # Replace with a path to your Tailscale API key.
-apikey='tskey-api-kmFNNv6CNTRL-LknwqGVVuK2foXf2TEbNL2XYVG5G29vWf'
-targetname='ljc-tailscale-host'
+apikey="tskey-api-kmFNNv6CNTRL-LknwqGVVuK2foXf2TEbNL2XYVG5G29vWf"
+targetname="ljc-tailscale-host"
 
 curl -s "https://api.tailscale.com/api/v2/tailnet/$tailnet/devices" -u "$apikey:" |jq -r '.devices[] |  "\(.id) \(.name)"' |
   while read id name; do
