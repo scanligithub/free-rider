@@ -1,3 +1,6 @@
+name: Tailscale+V2ray
+
+
 # 注意事项：
 # 1. 应当指定每个任务的持续时间和开始时间，例如设置 schedule.cron 属性让任务每个小时自动运行一次，每次运行时间 60分钟 （由 "Start V2ray" 中的 timeout-minutes 指定）
 # 2. 应当确保 IP_ASSIGNMENT
