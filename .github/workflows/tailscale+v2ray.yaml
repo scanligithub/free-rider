@@ -21,6 +21,7 @@ jobs:
       - name: Install Tailscale
         run: |
           echo "IP config"
+          sudo apt install net-tools -y
           ipconfig -a
           curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
           curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
